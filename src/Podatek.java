@@ -19,12 +19,15 @@ public class Podatek {
 	
 	
 	public double oblicz(double dochod) {
-		if (dochod < 85.528) {
-			podatek = dochod * 0.18 - 556.02;
+		if (dochod < 85528) {
+			podatek = (dochod * 0.18) + 556.02;
+			//System.out.println(podatek);
 			dochod = dochod - podatek;
 		} else {
-			podatek = dochod * 0.32 - 14839.02;
+			podatek = dochod - 85528.02 + 14839.02;
+			//System.out.println(podatek);
 			dochod = dochod - podatek;
+			
 		}
 		return dochod;
 	}
